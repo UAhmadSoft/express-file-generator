@@ -1,0 +1,66 @@
+const <VARIABLE_CAPITALIZE> = require('../models/<VARIABLE_CAPITALIZE>');
+const AppError = require('../utils/appError');
+const catchAsync = require('../utils/catchAsync');
+
+exports.getAll<VARIABLE_CAPITALIZE>s = catchAsync(async (req, res, next) => {
+  const <VARIABLE_LOWERCASE>s = await <VARIABLE_CAPITALIZE>.find();
+
+  res.status(200).json({
+    status: 'success',
+    <VARIABLE_LOWERCASE>s,
+  });
+});
+
+exports.addNew<VARIABLE_CAPITALIZE> = catchAsync(async (req, res, next) => {
+  const <VARIABLE_LOWERCASE> = await <VARIABLE_CAPITALIZE>.create(req.body);
+
+  res.status(201).json({
+    status: 'success',
+    <VARIABLE_LOWERCASE>,
+  });
+});
+
+exports.get<VARIABLE_CAPITALIZE> = catchAsync(async (req, res, next) => {
+  const <VARIABLE_LOWERCASE> = await <VARIABLE_CAPITALIZE>.findById(req.params.id);
+
+  if (!<VARIABLE_LOWERCASE>)
+    return next(
+      new AppError(`Can't find <VARIABLE_LOWERCASE> for id ${req.params.id}`, 404)
+    );
+
+  res.status(200).json({
+    status: 'success',
+    <VARIABLE_LOWERCASE>,
+  });
+});
+
+exports.update<VARIABLE_CAPITALIZE> = catchAsync(async (req, res, next) => {
+  const <VARIABLE_LOWERCASE> = await <VARIABLE_CAPITALIZE>.findByIdAndUpdate(req.params.id, req.body, {
+    new: true,
+    runValidators: true,
+  });
+
+  if (!<VARIABLE_LOWERCASE>)
+    return next(
+      new AppError(`Can't find <VARIABLE_LOWERCASE> for id ${req.params.id}`, 404)
+    );
+
+  res.status(200).json({
+    status: 'success',
+    <VARIABLE_LOWERCASE>,
+  });
+});
+
+exports.delete<VARIABLE_CAPITALIZE> = catchAsync(async (req, res, next) => {
+  const <VARIABLE_LOWERCASE> = await <VARIABLE_CAPITALIZE>.findByIdAndDelete(req.params.id);
+
+  if (!<VARIABLE_LOWERCASE>)
+    return next(
+      new AppError(`Can't find <VARIABLE_LOWERCASE> for id ${req.params.id}`, 404)
+    );
+
+  res.status(200).json({
+    status: 'success',
+    <VARIABLE_LOWERCASE>,
+  });
+});

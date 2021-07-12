@@ -1,0 +1,18 @@
+const express = require('express');
+
+const <VARIABLE_LOWERCASE>Controller = require('../controllers/<VARIABLE_CAPITALIZE>Controller');
+
+const router = express.Router();
+
+router
+  .route('/')
+  .get(<VARIABLE_LOWERCASE>Controller.getAll<VARIABLE_CAPITALIZE>s)
+  .post(<VARIABLE_LOWERCASE>Controller.addNew<VARIABLE_CAPITALIZE>);
+
+router
+  .route('/:id')
+  .get(<VARIABLE_LOWERCASE>Controller.get<VARIABLE_CAPITALIZE>)
+  .patch(<VARIABLE_LOWERCASE>Controller.update<VARIABLE_CAPITALIZE>)
+  .delete(<VARIABLE_LOWERCASE>Controller.delete<VARIABLE_CAPITALIZE>);
+
+module.exports = router;

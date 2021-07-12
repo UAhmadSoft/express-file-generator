@@ -1,0 +1,14 @@
+const mongoose = require('mongoose');
+
+const <VARIABLE_LOWERCASE>Schema = new mongoose.Schema({
+  name: String,
+  
+});
+
+// this.pre(/^find/, function (next) {
+//  this.populate({ path: '' });
+//  next();
+// });
+
+const <VARIABLE_CAPITALIZE> = mongoose.model('<VARIABLE_CAPITALIZE>', <VARIABLE_LOWERCASE>Schema);
+module.exports = <VARIABLE_CAPITALIZE>;
