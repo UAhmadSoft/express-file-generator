@@ -1,8 +1,11 @@
 {
   "name": "express-file-generator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Generates Controller , Router or Models file for any Variable passed with Full CRUD",
   "main": "app.js",
+  "bin": {
+    "generate-file": "./cli.js"
+  },
   "scripts": {
     "start": "node app.js"
   },
@@ -11,6 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "colors": "^1.4.0",
+    "path": "^0.12.7",
     "prompt-sync": "^4.2.0"
   }
 }
