@@ -1,13 +1,13 @@
 {
   "name": "express-file-generator",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Generates Controller , Router or Models file for any Variable passed with Full CRUD",
+  "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "node app.js"
   },
-  "keywords": [],
-  "author": "",
+  "repository": "https://github.com/UAhmadSoft/express-file-generator",
+  "author": "UAhmadSoft",
   "license": "ISC",
   "dependencies": {
     "colors": "^1.4.0",
