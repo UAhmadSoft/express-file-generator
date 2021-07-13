@@ -14,25 +14,6 @@ after that , Run Command :
 generate-file
 ```
 
-Then you can create your controller / route / model against prompt messages
+Then you can create your controller / route / model against simple CLI
 
-```
-Enter exit to quit Application !
-
-
-Enter Type of File you want to generate :
-controller|router|model
-
- :  controller
-Name Of controller :    user
-userController.js Created Successfully !
-```
-
-You Can Exit the CLI App by extering exit
-
-```
-Enter Type of File you want to generate :
-controller|router|model
-
- :  exit
-```
+You can also generate boilerplate files like AuthController , globalErrorHadler or AppError etc.
